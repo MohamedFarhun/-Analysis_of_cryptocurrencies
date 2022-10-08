@@ -41,8 +41,10 @@ start = st.date_input('Start',dt.date(2021,8, 12))
 end=st.date_input('End',value=pd.to_datetime('today'))
 df = yf.download(symbol,start,end)
 df=df.head(5)
-dff=df.tail(5)
 st.table(df)
+
+
+dff=df.tail(5)
 st.table(dff)
 
 df1=df.describe()
