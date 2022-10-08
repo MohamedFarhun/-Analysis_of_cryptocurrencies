@@ -44,12 +44,10 @@ st.table(df)
 
 df1=df.describe()
 st.table(df1)
-st.write("=============================================================")
-describe=print (df.dtypes)
-st.dataframe(describe)
 
-df1 = df[['Date','Close']]
-df1.head(10)
+df = df[['Date','Close']]
+df.head(10)
+st.table(df)
 
 # Setting the Date as Index
 df_ts = df1.set_index('Date')
