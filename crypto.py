@@ -102,7 +102,7 @@ df_ts_m = df_ts.resample('M').mean()
 df_ts_m = pd.DataFrame({symbol : df['Close']})
 test_stationarity(df_ts_m)
 
-tsmlog = np.log10(tsm)
+tsmlog = np.log10(df_ts_m)
 tsmlog.dropna(inplace=True)
 
 tsmlogdiff = tsmlog.diff(periods=1)
