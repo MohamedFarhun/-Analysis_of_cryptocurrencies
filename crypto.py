@@ -87,3 +87,13 @@ plt.title('Rolling Mean & Standard Deviation')
 plt.show(block=False)
 st.pyplot(plt)
 plt.close()
+
+
+decomposition = sm.tsa.seasonal_decompose(ts, model='multiplicative')
+fig = decomposition.plot()
+fig.set_figwidth(12)
+fig.set_figheight(8)
+fig.suptitle('Decomposition of multiplicative time series')
+plt.show()
+st.pyplot(plt)
+plt.close()
