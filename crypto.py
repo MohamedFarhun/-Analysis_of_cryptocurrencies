@@ -15,6 +15,7 @@ import statsmodels.tsa.api as smt
 import statsmodels.formula.api as smf
 from sklearn.metrics import mean_squared_error
 import datetime as dt
+from statsmodels.tsa.stattools import adfuller
 
 st.title('Analysis of cryptocurrencies')
 
@@ -63,3 +64,13 @@ st.table(df_ts1)
 st.set_option('deprecation.showPyplotGlobalUse', False)
 plt.plot(pd.DataFrame({symbol : df['Close']}))
 st.pyplot(plt)
+
+def test_stationarity(timeseries):
+    dftest = adfuller(timeseries, autolag='AIC')
+    dfoutput = pd.Series(dftest[0:4], index=['Test Statistic', 'p-value', '#lags Used', 'Number of Observations Used'])
+    for key, value in dftest[4].items():
+        dfoutput['Critical Value (%s)'%key] = value
+        st.write(dfoutput)
+        
+        
+     
