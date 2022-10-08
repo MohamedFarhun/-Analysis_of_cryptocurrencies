@@ -44,7 +44,8 @@ st.table(df)
 
 print (df.describe())
 print ("=============================================================")
-print (df.dtypes)
+describe=print (df.dtypes)
+st.dataframe(describe)
 
 df1 = df[['Date','Close']]
 df1.head(10)
