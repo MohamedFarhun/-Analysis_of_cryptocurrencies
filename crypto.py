@@ -44,6 +44,7 @@ st.write('Bitcoin uses peer-to-peer technology to operate with no central author
 start = st.date_input('Start',dt.date(2021,8, 12))
 end=st.date_input('End',value=pd.to_datetime('today'),key=1)
 df = yf.download(symbol,start,end)
+st.subheader('First 5 dates of BTC-USD stock')
 df=df.head(5)
 st.table(df)
 
@@ -51,14 +52,17 @@ symbol='BTC-USD'
 start = st.date_input('Start',dt.date(2021,8, 13))
 end=st.date_input('End',value=pd.to_datetime('today'),key=2)
 df = yf.download(symbol,start,end)
+st.subheader('Last 5 dates of BTC-USD stock')
 dff=df.tail(5)
 st.table(dff)
 
+st.subheader('Calculating and describing mean,std,count')
 df1=df.describe()
 st.table(df1)
 
 new_df = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
 df_ts=new_df.head(3)
+st.subheader('Setting date as index')
 st.table(df_ts)
 new_df1 = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
 df_ts1=new_df1.tail(3)
@@ -66,6 +70,7 @@ st.table(df_ts1)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 plt.plot(pd.DataFrame({symbol : df['Close']}))
+st.subheader('Plotting the Close data')
 st.pyplot(plt)
 plt.close()
 
