@@ -35,7 +35,10 @@ with st.sidebar:
     video_bytes = video_file.read()
     st.video(video_bytes)
 
-df = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
+symbol = 'BTC-USD'
+start=st.date_input('Start',value =pd.to_datetime('2022-10-08'))
+end=st.date_input('End',value=pd.to_datetime('today'))
+df = yf.download(symbol,start,end)
 df=df.head(5)
 st.table(df)
 
