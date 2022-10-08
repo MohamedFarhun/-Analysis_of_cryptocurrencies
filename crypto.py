@@ -127,7 +127,7 @@ df_bitcoin.set_index('Date', inplace = True)
 
 # fit model
 model = ARIMA(df_bitcoin, order=(5,1,0))
-model_fit = model.fit(disp=0)
+model_fit = model.fit()
 summary=model_fit.summary()
 st.write(summary)
 # plot residual errors
