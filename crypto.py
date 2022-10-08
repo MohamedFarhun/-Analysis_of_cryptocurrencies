@@ -44,7 +44,7 @@ df=df.head(5)
 st.table(df)
 
 symbol = 'BTC-USD'
-start = st.date_input('Start',dt.date(2021,8, 12))
+start = st.date_input('Start',dt.date(2021,8, 13))
 end=st.date_input('End',value=pd.to_datetime('today'))
 df = yf.download(symbol,start,end)
 dff=df.tail(5)
