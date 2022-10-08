@@ -71,7 +71,6 @@ def test_stationarity(timeseries):
     dfoutput = pd.Series(dftest[0:4], index=['Test Statistic', 'p-value', '#lags Used', 'Number of Observations Used'])
     for key, value in dftest[4].items():
         dfoutput['Critical Value (%s)'%key] = value
-     break
        
 ts = pd.DataFrame({symbol : df['Close']})
 test_stationarity(ts)
@@ -87,7 +86,6 @@ plt.title('Rolling Mean & Standard Deviation')
 plt.show(block=False)
 st.pyplot(plt)
 plt.close()
-
 
 decomposition = sm.tsa.seasonal_decompose(ts, model='multiplicative')
 fig = decomposition.plot()
