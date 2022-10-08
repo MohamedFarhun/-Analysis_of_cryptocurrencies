@@ -61,5 +61,5 @@ df_ts1=new_df1.tail(3)
 st.table(df_ts1)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-df_ts=plt.plot()
-st.pyplot(df_ts)
+df_ts['Close']=plt.plot()
+st.pyplot(df_ts['Close'])
