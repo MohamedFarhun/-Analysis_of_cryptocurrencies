@@ -42,8 +42,9 @@ df = yf.download(symbol,start,end)
 df=df.head(5)
 st.table(df)
 
-print (df.describe())
-print ("=============================================================")
+df1=df.describe()
+st.table(df1)
+st.write("=============================================================")
 describe=print (df.dtypes)
 st.dataframe(describe)
 
