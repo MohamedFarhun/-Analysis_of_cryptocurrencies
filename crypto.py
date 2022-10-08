@@ -37,16 +37,18 @@ with st.sidebar:
     video_bytes = video_file.read()
     st.video(video_bytes)
 
-symbol = 'BTC-USD'
+tickers=('BTC-USD','ETH-USD','XRP-USD','DOT-USD')
+dropdown=st.multiselect('Pick your assets',tickers,key=1,default='BTC-USD')
 start = st.date_input('Start',dt.date(2021,8, 12))
-end=st.date_input('End',value=pd.to_datetime('today'),key=1)
-df = yf.download(symbol,start,end)
+end=st.date_input('End',value=pd.to_datetime('today'),key=2)
+df = yf.download(dropdown,start,end)
 df=df.head(5)
 st.table(df)
 
-symbol = 'BTC-USD'
+tickers=('BTC-USD','ETH-USD','XRP-USD','DOT-USD')
+dropdown=st.multiselect('Pick your assets',tickers,key=3,default='BTC-USD')
 start = st.date_input('Start',dt.date(2021,8, 13))
-end=st.date_input('End',value=pd.to_datetime('today'),key=2)
+end=st.date_input('End',value=pd.to_datetime('today'),key=4)
 df = yf.download(symbol,start,end)
 dff=df.tail(5)
 st.table(dff)
