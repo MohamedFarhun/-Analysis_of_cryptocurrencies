@@ -38,7 +38,7 @@ with st.sidebar:
 
 symbol = 'BTC-USD'
 start = st.date_input('Start',dt.date(2021,8, 12))
-end=st.date_input('End',value=pd.to_datetime('today'))
+end=st.date_input('End',dt.date(2022,9,12))
 df = yf.download(symbol,start,end)
 df=df.head(5)
 st.table(df)
