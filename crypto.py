@@ -73,7 +73,7 @@ def test_stationarity(timeseries):
         dfoutput['Critical Value (%s)'%key] = value
         st.write(dfoutput)
         
-ts = pd.DataFrame({symbol : df_ts['Close']})
+ts = pd.DataFrame({symbol : df['Close']})
 test_stationarity(ts)
 st.table(ts)
      
@@ -99,6 +99,6 @@ st.pyplot(plt)
 plt.close()
 
 df_ts_m = df_ts.resample('M').mean()
-tsm = pd.DataFrame({symbol : df_ts_m['Close']})
-test_stationarity(tsm)
-st.table(tsm)
+df_ts_m = pd.DataFrame({symbol : df['Close']})
+test_stationarity(df_ts_m)
+st.table(df_ts_m)
