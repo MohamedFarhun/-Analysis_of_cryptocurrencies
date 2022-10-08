@@ -111,6 +111,7 @@ df_ts_1= df_ts.resample('M').mean()
 df_ts_1 = pd.DataFrame({symbol : df['Close']})
 test_stationarity(df_ts_1)
 
+st.subheader('Log values')
 tsmlog = np.log10(df_ts_1)
 tsmlog.dropna(inplace=True)
 
