@@ -101,5 +101,4 @@ st.subheader('After resampling')
 df_ts_m = df_ts.resample('M').mean()
 df_ts_m = pd.DataFrame({symbol : df['Close']})
 test_stationarity(df_ts_m)
-st.table(df_ts_m)
 
