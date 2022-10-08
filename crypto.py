@@ -38,6 +38,11 @@ with st.sidebar:
     st.video(video_bytes)
 
 symbol='BTC-USD'
+st.header('Bitcoin')
+st.text('Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.')
+video_file = open('bitcoin.mp4', 'rb')
+video_bytes = video_file.read()
+st.video(video_bytes)
 start = st.date_input('Start',dt.date(2021,8, 12))
 end=st.date_input('End',value=pd.to_datetime('today'),key=1)
 df = yf.download(symbol,start,end)
