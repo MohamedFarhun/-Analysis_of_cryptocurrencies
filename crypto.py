@@ -71,12 +71,11 @@ def test_stationarity(timeseries):
     dfoutput = pd.Series(dftest[0:4], index=['Test Statistic', 'p-value', '#lags Used', 'Number of Observations Used'])
     for key, value in dftest[4].items():
         dfoutput['Critical Value (%s)'%key] = value
-        st.write('Output after timeseries is:-',dfoutput)
+        st.write('Critical values for 1%,5%,10%:-',dfoutput)
         
         
 ts = pd.DataFrame({symbol : df['Close']})
 test_stationarity(ts)
-st.table(ts)
      
 rolmean = ts.rolling(window=12).mean()
 rolvar = ts.rolling(window=12).std()
