@@ -61,5 +61,5 @@ df_ts1=new_df1.tail(3)
 st.table(df_ts1)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-plt.scatter(new_df['Open'], new_df['Close'])
+plt.scatter(new_df['Close'])
 st.pyplot(plt)
