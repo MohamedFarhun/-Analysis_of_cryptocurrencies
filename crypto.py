@@ -40,7 +40,7 @@ with st.sidebar:
 symbol='BTC-USD'
 st.header('Bitcoin')
 st.image('bitcoin.jpg')
-st.text('Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.')
+st.write('Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.')
 start = st.date_input('Start',dt.date(2021,8, 12))
 end=st.date_input('End',value=pd.to_datetime('today'),key=1)
 df = yf.download(symbol,start,end)
