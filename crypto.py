@@ -72,5 +72,6 @@ def test_stationarity(timeseries):
         dfoutput['Critical Value (%s)'%key] = value
         st.write(dfoutput)
         
-        
+ts = df_ts['Close']
+st.dataframe(ts)
      
