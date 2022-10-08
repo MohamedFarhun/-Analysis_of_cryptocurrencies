@@ -71,7 +71,7 @@ def test_stationarity(timeseries):
     dfoutput = pd.Series(dftest[0:4], index=['Test Statistic', 'p-value', '#lags Used', 'Number of Observations Used'])
     for key, value in dftest[4].items():
         dfoutput['Critical Value (%s)'%key] = value
-        st.write('Output after timeseries is:-',value)
+        st.write('Output after timeseries is:-',dfoutput)
         
         
 ts = pd.DataFrame({symbol : df['Close']})
