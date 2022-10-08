@@ -60,5 +60,5 @@ new_df1 = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
 df_ts1=new_df1.tail(3)
 st.table(df_ts1)
 
-plt=df_ts.plot()
-st.pyplot(plt)
+df_ts=plt.plot()
+st.pyplot(df_ts)
