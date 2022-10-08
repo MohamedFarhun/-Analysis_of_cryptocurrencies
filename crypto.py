@@ -34,9 +34,10 @@ with st.sidebar:
     video_file = open('Crypto.mp4', 'rb')
     video_bytes = video_file.read()
     st.video(video_bytes)
-    
+
 df = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
 df.head(5)
+st.table(df)
 
 print (df.describe())
 print ("=============================================================")
