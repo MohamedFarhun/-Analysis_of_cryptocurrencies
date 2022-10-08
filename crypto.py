@@ -9,7 +9,7 @@ from pandas import DataFrame
 import matplotlib.pyplot as plt
 from pandas import datetime
 from pandas import read_csv
-from statsmodels.tsa.arima_model import ARIMA
+from statsmodels.tsa.arima.model import ARIMA
 import statsmodels.api as sm
 import statsmodels.tsa.api as smt
 import statsmodels.formula.api as smf
