@@ -99,4 +99,5 @@ st.pyplot(plt)
 plt.close()
 
 df_ts_m = df_ts.resample('M').mean()
-st.write(type(df_ts_m)
+print (type(df_ts_m))
+st.write(df_ts_m)
