@@ -97,3 +97,6 @@ fig.suptitle('Decomposition of multiplicative time series')
 plt.show()
 st.pyplot(plt)
 plt.close()
+
+df_ts_m = df_ts.resample('M').mean()
+st.write(type(df_ts_m)
