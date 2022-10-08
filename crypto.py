@@ -37,29 +37,27 @@ with st.sidebar:
     video_bytes = video_file.read()
     st.video(video_bytes)
 
-tickers=('BTC-USD','ETH-USD','XRP-USD','DOT-USD')
-dropdown=st.multiselect('Pick your assets',tickers,key=1,default='BTC-USD')
+symbol='BTC-USD'
 start = st.date_input('Start',dt.date(2021,8, 12))
-end=st.date_input('End',value=pd.to_datetime('today'),key=2)
-df = yf.download(dropdown,start,end)
+end=st.date_input('End',value=pd.to_datetime('today'),key=1)
+df = yf.download(symbol,start,end)
 df=df.head(5)
 st.table(df)
 
-tickers=('BTC-USD','ETH-USD','XRP-USD','DOT-USD')
-dropdown=st.multiselect('Pick your assets',tickers,key=3,default='BTC-USD')
+symbol='BTC-USD'
 start = st.date_input('Start',dt.date(2021,8, 13))
-end=st.date_input('End',value=pd.to_datetime('today'),key=4)
-df = yf.download(dropdown,start,end)
+end=st.date_input('End',value=pd.to_datetime('today'),key=2)
+df = yf.download(symbol,start,end)
 dff=df.tail(5)
 st.table(dff)
 
 df1=df.describe()
 st.table(df1)
 
-new_df = pd.DataFrame({dropdown : df['Open'], dropdown : df['Close']})
+new_df = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
 df_ts=new_df.head(3)
 st.table(df_ts)
-new_df1 = pd.DataFrame({dropdown : df['Open'], dropdown : df['Close']})
+new_df1 = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
 df_ts1=new_df1.tail(3)
 st.table(df_ts1)
 
