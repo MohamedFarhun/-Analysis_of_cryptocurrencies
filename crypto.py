@@ -118,3 +118,22 @@ plt.tight_layout()
 st.pyplot(plt)
 plt.close()
 
+crypto_data = {}
+crypto_data['bitcoin'] = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
+
+df_bitcoin = pd.DataFrame(crypto_data['bitcoin'])
+df_bitcoin = df_bitcoin[['Date','Close']]
+df_bitcoin.set_index('Date', inplace = True)
+
+# fit model
+model = ARIMA(df_bitcoin, order=(5,1,0))
+model_fit = model.fit(disp=0)
+summary=model_fit.summary()
+st.write(summary)
+# plot residual errors
+residuals = DataFrame(model_fit.resid)
+residuals.plot()
+plt.show()
+residuals.plot(kind='kde')
+plt.show()
+st.pyplot(plt)
