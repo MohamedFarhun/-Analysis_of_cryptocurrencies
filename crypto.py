@@ -73,9 +73,9 @@ def test_stationarity(timeseries):
         dfoutput['Critical Value (%s)'%key] = value
         st.write(dfoutput)
         
-ts = pd.DataFrame({symbol : df['Close']})
+ts = pd.DataFrame({symbol : df_ts['Close']})
 test_stationarity(ts)
-st.dataframe(ts)
+st.table(ts)
      
 rolmean = ts.rolling(window=12).mean()
 rolvar = ts.rolling(window=12).std()
@@ -99,5 +99,6 @@ st.pyplot(plt)
 plt.close()
 
 df_ts_m = df_ts.resample('M').mean()
-print (df_ts_m.head(3))
-st.write(df_ts_m)
+tsm = pd.DataFrame({symbol : df_ts_m['Close']})
+test_stationarity(tsm)
+st.table(tsm)
