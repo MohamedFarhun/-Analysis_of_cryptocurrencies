@@ -45,6 +45,6 @@ st.table(df)
 df1=df.describe()
 st.table(df1)
 
-df2 = df[['Date','Close']]
+df2 = pd.DataFrame({symbol : df['Date'], symbol : df['Close']}
 df2.head(10)
 st.table(df2)
