@@ -45,16 +45,6 @@ st.table(df)
 df1=df.describe()
 st.table(df1)
 
-df = df[['Date','Close']]
-df.head(10)
-st.table(df)
-
-# Setting the Date as Index
-df_ts = df1.set_index('Date')
-df_ts.sort_index(inplace=True)
-print (type(df_ts))
-print (df_ts.head(3))
-print ("========================")
-print (df_ts.tail(3))
-
-df_ts.plot()
+df2 = df[['Date','Close']]
+df2.head(10)
+st.table(df2)
