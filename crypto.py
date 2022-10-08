@@ -1,6 +1,19 @@
 import streamlit as st
 import yfinance as yf
 import pandas as pd
+import warnings
+warnings.filterwarnings('ignore')
+import numpy as np 
+import pandas as pd 
+from pandas import DataFrame
+import matplotlib.pyplot as plt
+from pandas import datetime
+from pandas import read_csv
+from statsmodels.tsa.arima_model import ARIMA
+import statsmodels.api as sm
+import statsmodels.tsa.api as smt
+import statsmodels.formula.api as smf
+from sklearn.metrics import mean_squared_error
 
 st.title('Analysis of cryptocurrencies')
 
@@ -21,3 +34,23 @@ with st.sidebar:
     video_file = open('Crypto.mp4', 'rb')
     video_bytes = video_file.read()
     st.video(video_bytes)
+    
+df = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
+df.head(5)
+
+print (df.describe())
+print ("=============================================================")
+print (df.dtypes)
+
+df1 = df[['Date','Close']]
+df1.head(10)
+
+# Setting the Date as Index
+df_ts = df1.set_index('Date')
+df_ts.sort_index(inplace=True)
+print (type(df_ts))
+print (df_ts.head(3))
+print ("========================")
+print (df_ts.tail(3))
+
+df_ts.plot()
