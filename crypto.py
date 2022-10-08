@@ -50,7 +50,7 @@ df2 = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
 df2.head(10)
 st.table(df2)
 
-df_ts = df.set_index('Date')
+df_ts = df2.set_index({symbol :df['Open']})
 df_ts.sort_index(inplace=True)
 st.table(df_ts.head(3))
 print ("========================")
