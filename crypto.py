@@ -99,7 +99,7 @@ plt.close()
 
 st.subheader('After resampling')
 df_ts_1= df_ts.resample('M').mean()
-df_ts_1 = pd.DataFrame({symbol : df['Close']})
+df_ts_1 = pd.DataFrame({symbol : new_df['Close']})
 test_stationarity(df_ts_1)
 
 tsmlog = np.log10(df_ts_1)
