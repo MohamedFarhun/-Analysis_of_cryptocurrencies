@@ -36,7 +36,7 @@ with st.sidebar:
     st.video(video_bytes)
 
 symbol = 'BTC-USD'
-start=st.date_input('Start',value =pd.to_datetime('2022-10-08'))
+start=st.date_input('Start',value =pd.to_datetime('2022-10-01'))
 end=st.date_input('End',value=pd.to_datetime('today'))
 df = yf.download(symbol,start,end)
 df=df.head(5)
