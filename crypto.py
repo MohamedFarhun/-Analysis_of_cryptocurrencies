@@ -111,16 +111,6 @@ tsmlogdiff = tsmlog.diff(periods=1)
 tsmlogdiff.dropna(inplace=True)
 test_stationarity(tsmlogdiff)
 
-fig, axes = plt.subplots(1, 2)
-fig.set_figwidth(12)
-fig.set_figheight(4)
-smt.graphics.plot_acf(tsmlogdiff, lags=30, ax=axes[0], alpha=0.5)
-smt.graphics.plot_pacf(tsmlogdiff, lags=30, ax=axes[1], alpha=0.5)
-plt.tight_layout()
-st.subheader('Auto correlation and Partial Auto correlation')
-st.pyplot(plt)
-plt.close()
-
 crypto_data = {}
 crypto_data['bitcoin'] = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
 
