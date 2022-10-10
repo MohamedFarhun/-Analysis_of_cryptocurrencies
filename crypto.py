@@ -45,7 +45,7 @@ start = st.date_input('Start',dt.date(2021,8, 12))
 end=st.date_input('End',value=pd.to_datetime('today'),key=1)
 df = yf.download(symbol,start,end)
 st.subheader('First 5 dates of BTC-USD stock')
-df=df.head(5)
+df=df.head(20)
 st.table(df)
 
 st.subheader('Calculating and describing mean,std,count')
