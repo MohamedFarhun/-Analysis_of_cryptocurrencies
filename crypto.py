@@ -80,6 +80,7 @@ test_stationarity(ts)
      
 rolmean = ts.rolling(window=12).mean()
 rolvar = ts.rolling(window=12).std()
+plt.figure(figsize=(15, 5))
 plt.plot(ts, label='Original')
 plt.plot(rolmean, label='Rolling Mean')
 plt.plot(rolvar, label='Rolling Standard Variance')
