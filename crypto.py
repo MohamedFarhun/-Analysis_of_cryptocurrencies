@@ -48,14 +48,6 @@ st.subheader('First 5 dates of BTC-USD stock')
 df=df.head(5)
 st.table(df)
 
-symbol='BTC-USD'
-start = st.date_input('Start',dt.date(2021,8, 13))
-end=st.date_input('End',value=pd.to_datetime('today'),key=2)
-df = yf.download(symbol,start,end)
-st.subheader('Last 5 dates of BTC-USD stock')
-dff=df.tail(5)
-st.table(dff)
-
 st.subheader('Calculating and describing mean,std,count')
 df1=df.describe()
 st.table(df1)
