@@ -112,11 +112,12 @@ tsmlogdiff.dropna(inplace=True)
 test_stationarity(tsmlogdiff)
 
 crypto_data = {}
-crypto_data['bitcoin'] = pd.read_csv('bitcoin.csv', parse_dates=['Date'])
+crypto_data['bitcoin'] = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
 
 df_bitcoin = pd.DataFrame(crypto_data['bitcoin'])
 df_bitcoin = df_bitcoin[['Date','Close']]
 df_bitcoin.set_index('Date', inplace = True)
+st.subheader('Took a csv file of bitcoin prices in 2018')
 
 # fit model
 model = ARIMA(df_bitcoin, order=(5,1,0))
