@@ -62,6 +62,7 @@ st.table(df_ts1)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 plt.plot(pd.DataFrame({symbol : df['Close']}))
+plt.figsize(4,20)
 st.subheader('Plotting the Close data')
 st.pyplot(plt)
 plt.close()
