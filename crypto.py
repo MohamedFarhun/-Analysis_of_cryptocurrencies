@@ -62,8 +62,11 @@ st.table(df_ts1)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 plt.plot(pd.DataFrame({symbol : df['Close']}))
+fig = plt.figure()
+fig.set_figheight(5)
+fig.set_figwidth(10)
 st.subheader('Plotting the Close data')
-st.pyplot(plt)
+st.pyplot(fig)
 plt.close()
 
 def test_stationarity(timeseries):
