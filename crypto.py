@@ -99,7 +99,7 @@ st.pyplot(plt)
 plt.close()
 
 st.subheader('After resampling')
-df_ts_1= df_ts.resample('M').mean()
+df_ts_1= df_ts1.resample('M').mean()
 df_ts_1 = pd.DataFrame({symbol : df['Close']})
 test_stationarity(df_ts_1)
 
