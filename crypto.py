@@ -37,6 +37,18 @@ with st.sidebar:
     video_bytes = video_file.read()
     st.video(video_bytes)
 
+def st_ui():
+    '''
+    Streamlit UI
+    '''
+    st.set_page_config(
+        page_title="Analysis of cryptocurrencies",
+        page_icon="🍲",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
+    
+
 symbol='BTC-USD'
 st.header('Bitcoin')
 st.image('bitcoin.jpg')
