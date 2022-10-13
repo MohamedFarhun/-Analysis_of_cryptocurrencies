@@ -532,7 +532,7 @@ crypto_data['Ripple'] = pd.read_csv('Ripple_price.csv', parse_dates=['Date'])
 df_Ripple = pd.DataFrame(crypto_data['Ripple'])
 df_Ripple = df_Ripple[['Date','Close']]
 df_Ripple.set_index('Date', inplace = True)
-st.subheader('Took a csv file of Ethereum prices')
+st.subheader('Took a csv file of Ripple prices')
 
 # fit model
 model = ARIMA(df_Ripple, order=(5,1,0))
@@ -572,6 +572,6 @@ print('Test MSE: %.3f' % error)
 plt.plot(test)
 plt.plot(predictions, color='red')
 plt.show()
-st.subheader('Predicting future values by graph of ETH-USD')
+st.subheader('Predicting future values by graph of XRP-USD')
 st.pyplot(plt)
 plt.close()
