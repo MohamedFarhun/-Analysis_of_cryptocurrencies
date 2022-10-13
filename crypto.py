@@ -277,15 +277,15 @@ tsmlogdiff.dropna(inplace=True)
 test_stationarity(tsmlogdiff)
 
 crypto_data = {}
-crypto_data['bitcoin'] = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
+crypto_data['Ethereum'] = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
 
-df_bitcoin = pd.DataFrame(crypto_data['bitcoin'])
-df_bitcoin = df_bitcoin[['Date','Close']]
-df_bitcoin.set_index('Date', inplace = True)
-st.subheader('Took a csv file of bitcoin prices in 2018')
+df_Ethereum = pd.DataFrame(crypto_data['Ethereum'])
+df_Ethereum = df_Ethereum[['Date','Close']]
+df_Ethereum.set_index('Date', inplace = True)
+st.subheader('Took a csv file of Ethereum prices in 2018')
 
 # fit model
-model = ARIMA(df_bitcoin, order=(5,1,0))
+model = ARIMA(df_Ethereum, order=(5,1,0))
 model_fit = model.fit()
 summary=model_fit.summary()
 st.write(summary)
@@ -302,7 +302,7 @@ st.subheader('Residuals while plotting')
 st.pyplot(plt)
 plt.close()
 
-X = df_bitcoin.values
+X = df_Ethereum,.values
 size = int(len(X) * 0.80)
 train, test = X[0:size], X[size:len(X)]
 history = [x for x in train]
