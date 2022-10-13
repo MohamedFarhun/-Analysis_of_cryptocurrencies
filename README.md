@@ -56,33 +56,7 @@ analysis_of_cryptocurrencies.cryptocurrency().value
 
 ##### analysis_of_cryptocurrency
 
-
 analysis_of_cryptocurrencies.analysis_of_cryptocurrency().value
-
-##### app
-
-
-analysis_of_cryptocurrencies.app().value
-
-
-##### bitcoin
-
-
-analysis_of_cryptocurrencies.bitcoin().value
-
-
-##### st_ui
-
-
-analysis_of_cryptocurrencies.st_ui().value
-
-### Undocumented endpoints
-### Consider adding docstrings for these functions in your code.
-
-##### test_stationarity
-
-
-analysis_of_cryptocurrencies.test_stationarity(timeseries).value
 
 ### R
 library(rdaisi)
@@ -97,14 +71,9 @@ analysis_of_cryptocurrencies$cryptocurrency()$value()
 ##### app
 analysis_of_cryptocurrencies$app()$value()
 
-##### bitcoin
-analysis_of_cryptocurrencies$bitcoin()$value()
-
 #### st_ui
 analysis_of_cryptocurrencies$st_ui()$value()
 
-##### test_stationarity
-analysis_of_cryptocurrencies$test_stationarity(timeseries)$value()
 
 ### Screenshot of our app
 ![image](https://user-images.githubusercontent.com/86124759/195563159-b7da0b33-90cf-4f66-b67b-265ff723e062.png)
