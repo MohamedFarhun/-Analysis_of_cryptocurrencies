@@ -38,14 +38,14 @@ We have developed an app which predicts the future cryptocurrency values of btc-
 It is recommended to use this application on the daisi platform itself using the link https://app.daisi.io/daisies/farhun/Analysis%20of%20cryptocurrencies/app
 However, you can still use your own editor using the below method:
 
-###Python
+### Python
 See the docs for pyDaisi installation and authentication.
 
-###Calling our app
+### Calling our app
 import pydaisi as pyd
 analysis_of_cryptocurrencies = pyd.Daisi("farhun/Analysis of cryptocurrencies")
 
-###Documented endpoints
+### Documented endpoints
 cryptocurrency
 analysis_of_cryptocurrencies.cryptocurrency().value
 
@@ -63,18 +63,18 @@ analysis_of_cryptocurrencies.bitcoin().value
 st_ui
 analysis_of_cryptocurrencies.st_ui().value
 
-###Undocumented endpoints
+### Undocumented endpoints
 ##Consider adding docstrings for these functions in your code.
 
 test_stationarity
 analysis_of_cryptocurrencies.test_stationarity(timeseries).value
 
-###R
+### R
 library(rdaisi)
 configure_daisi(python_path="/usr/local/bin/python3")
 analysis_of_cryptocurrencies <- Daisi("farhun/Analysis of cryptocurrencies")
 
-###Endpoints
+### Endpoints
 cryptocurrency
 analysis_of_cryptocurrencies$cryptocurrency()$value()
 
