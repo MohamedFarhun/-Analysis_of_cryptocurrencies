@@ -25,6 +25,34 @@ def cryptocurrency():
     if cryptocurrency: return cryptocurrency
     ...
 
+def analysis_of_cryptocurrency():
+    """Analysis_of_cryptocurrencies.cryptocurrency().value"""
+    global cryptocurrency
+    if cryptocurrency: return analysis_of_cryptocurrency
+    ...
+    
+def app():
+    '''
+    Streamlit UI
+    '''
+    st.set_page_config(
+        page_title="Analysis of cryptocurrencies",
+        page_icon="🍲",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
+    
+def bitcoin():
+    '''
+    Streamlit UI
+    '''
+    st.set_page_config(
+        page_title="Analysis of cryptocurrencies",
+        page_icon="🍲",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
+    
 with st.sidebar:
     st.header("Analysis of cryptocurrencies-Round 2")
     st.image("cryptocurrency.jpg")
