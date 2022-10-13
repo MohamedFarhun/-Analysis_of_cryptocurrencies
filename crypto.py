@@ -302,7 +302,7 @@ st.subheader('Residuals while plotting')
 st.pyplot(plt)
 plt.close()
 
-X = df_Ethereum,.values
+X = df_Ethereum.values
 size = int(len(X) * 0.80)
 train, test = X[0:size], X[size:len(X)]
 history = [x for x in train]
