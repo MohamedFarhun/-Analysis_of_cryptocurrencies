@@ -50,6 +50,8 @@ analysis_of_cryptocurrencies = pyd.Daisi("farhun/Analysis of cryptocurrencies")
 
 ### Documented endpoints
 cryptocurrency
+
+
 analysis_of_cryptocurrencies.cryptocurrency().value
 
 analysis_of_cryptocurrency
@@ -67,7 +69,7 @@ st_ui
 analysis_of_cryptocurrencies.st_ui().value
 
 ### Undocumented endpoints
-##Consider adding docstrings for these functions in your code.
+### Consider adding docstrings for these functions in your code.
 
 test_stationarity
 analysis_of_cryptocurrencies.test_stationarity(timeseries).value
