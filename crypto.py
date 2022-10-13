@@ -152,7 +152,7 @@ tsmlogdiff.dropna(inplace=True)
 test_stationarity(tsmlogdiff)
 
 crypto_data = {}
-crypto_data['bitcoin'] = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
+crypto_data['bitcoin'] = pd.read_csv('Bitcoin_price.csv', parse_dates=['Date'])
 
 df_bitcoin = pd.DataFrame(crypto_data['bitcoin'])
 df_bitcoin = df_bitcoin[['Date','Close']]
