@@ -77,13 +77,14 @@ def st_ui():
     )
     
 
-symbol='BTC-USD'
+tickers=('BTC-USD','ETH-USD','DOT-USD','XRP-USD','SOL-USD')
+dropdown=st.multiselect('Pick your assets',tickers,key=1,default='BTC-USD')
 st.header('Bitcoin')
 st.image('bitcoin.jpg')
 st.write('Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.')
 start = st.date_input('Start',dt.date(2021,8, 12))
 end=st.date_input('End',value=pd.to_datetime('today'),key=1)
-df = yf.download(symbol,start,end)
+df = yf.download(dropdown,start,end)
 st.subheader('Dates of BTC-USD stock')
 df=df.tail(15)
 st.table(df)
