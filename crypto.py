@@ -277,7 +277,7 @@ tsmlogdiff.dropna(inplace=True)
 test_stationarity(tsmlogdiff)
 
 crypto_data = {}
-crypto_data['Ethereum'] = pd.read_csv('bitcoin_price.csv', parse_dates=['Date'])
+crypto_data['Ethereum'] = pd.read_csv('Ethereum_price.csv', parse_dates=['Date'])
 
 df_Ethereum = pd.DataFrame(crypto_data['Ethereum'])
 df_Ethereum = df_Ethereum[['Date','Close']]
