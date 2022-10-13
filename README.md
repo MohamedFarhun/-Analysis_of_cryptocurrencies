@@ -60,7 +60,9 @@ analysis_of_cryptocurrencies.analysis_of_cryptocurrency().value
 
 ### R
 library(rdaisi)
+
 configure_daisi(python_path="/usr/local/bin/python3")
+
 analysis_of_cryptocurrencies <- Daisi("farhun/Analysis of cryptocurrencies")
 
 ### Endpoints
