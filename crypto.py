@@ -78,7 +78,7 @@ def st_ui():
     
 
 tickers=('BTC-USD','ETH-USD','DOT-USD','XRP-USD','SOL-USD')
-dropdown=st.multiselect('Pick your assets',tickers,key=1,default='BTC-USD')
+symbol=st.multiselect('Pick your assets',tickers,key=1,default='BTC-USD')
 st.header('Bitcoin')
 st.image('bitcoin.jpg')
 st.write('Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.')
@@ -93,9 +93,9 @@ st.subheader('Calculating and describing mean,std,count')
 df1=df.describe()
 st.table(df1)
 
-new_df = pd.DataFrame({dropdown : df['Open'], dropdown : df['Close']})
+new_df = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
 st.subheader('Setting date as index')
-new_df1 = pd.DataFrame({dropdown : df['Open'], dropdown : df['Close']})
+new_df1 = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
 df_ts1=new_df1.tail(3)
 st.table(df_ts1)
 
