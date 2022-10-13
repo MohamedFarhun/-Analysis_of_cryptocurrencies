@@ -49,29 +49,29 @@ import pydaisi as pyd
 analysis_of_cryptocurrencies = pyd.Daisi("farhun/Analysis of cryptocurrencies")
 
 ### Documented endpoints
-# cryptocurrency
+##### cryptocurrency
 
 
 analysis_of_cryptocurrencies.cryptocurrency().value
 
-# analysis_of_cryptocurrency
+##### analysis_of_cryptocurrency
 
 
 analysis_of_cryptocurrencies.analysis_of_cryptocurrency().value
 
-# app
+##### app
 
 
 analysis_of_cryptocurrencies.app().value
 
 
-# bitcoin
+##### bitcoin
 
 
 analysis_of_cryptocurrencies.bitcoin().value
 
 
-# st_ui
+##### st_ui
 
 
 analysis_of_cryptocurrencies.st_ui().value
@@ -79,7 +79,7 @@ analysis_of_cryptocurrencies.st_ui().value
 ### Undocumented endpoints
 ### Consider adding docstrings for these functions in your code.
 
-# test_stationarity
+##### test_stationarity
 
 
 analysis_of_cryptocurrencies.test_stationarity(timeseries).value
@@ -90,20 +90,20 @@ configure_daisi(python_path="/usr/local/bin/python3")
 analysis_of_cryptocurrencies <- Daisi("farhun/Analysis of cryptocurrencies")
 
 ### Endpoints
-# cryptocurrency
+##### cryptocurrency
 
 analysis_of_cryptocurrencies$cryptocurrency()$value()
 
-# app
+##### app
 analysis_of_cryptocurrencies$app()$value()
 
-# bitcoin
+##### bitcoin
 analysis_of_cryptocurrencies$bitcoin()$value()
 
-# st_ui
+#### st_ui
 analysis_of_cryptocurrencies$st_ui()$value()
 
-# test_stationarity
+##### test_stationarity
 analysis_of_cryptocurrencies$test_stationarity(timeseries)$value()
 
 ### Screenshot of our app
