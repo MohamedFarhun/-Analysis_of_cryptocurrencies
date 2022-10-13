@@ -157,7 +157,7 @@ crypto_data['bitcoin'] = pd.read_csv('Bitcoin_price.csv', parse_dates=['Date'])
 df_bitcoin = pd.DataFrame(crypto_data['bitcoin'])
 df_bitcoin = df_bitcoin[['Date','Close']]
 df_bitcoin.set_index('Date', inplace = True)
-st.subheader('Took a csv file of bitcoin prices in 2018')
+st.subheader('Took a csv file of bitcoin prices')
 
 # fit model
 model = ARIMA(df_bitcoin, order=(5,1,0))
@@ -282,7 +282,7 @@ crypto_data['Solana'] = pd.read_csv('Solana_price.csv', parse_dates=['Date'])
 df_Solana = pd.DataFrame(crypto_data['Solana'])
 df_Solana = df_Solana[['Date','Close']]
 df_Solana.set_index('Date', inplace = True)
-st.subheader('Took a csv file of Solana prices in 2018')
+st.subheader('Took a csv file of Solana prices')
 
 # fit model
 model = ARIMA(df_Solana, order=(5,1,0))
@@ -407,7 +407,7 @@ crypto_data['Ethereum'] = pd.read_csv('Ethereum_price.csv', parse_dates=['Date']
 df_Ethereum = pd.DataFrame(crypto_data['Ethereum'])
 df_Ethereum = df_Ethereum[['Date','Close']]
 df_Ethereum.set_index('Date', inplace = True)
-st.subheader('Took a csv file of Ethereum prices in 2018')
+st.subheader('Took a csv file of Ethereum prices')
 
 # fit model
 model = ARIMA(df_Ethereum, order=(5,1,0))
