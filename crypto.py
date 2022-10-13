@@ -206,7 +206,7 @@ symbol='ETH-USD'
 st.header('Ethereum')
 st.image('ethereum.jpg')
 st.write('Ethereum is the community-run technology powering the cryptocurrency ether (ETH) and thousands of decentralized applications.')
-start = st.date_input('Start',dt.date(2021,8, 12))
+start = st.date_input('Start',dt.date(2021,8, 13))
 end=st.date_input('End',value=pd.to_datetime('today'),key=3)
 df = yf.download(symbol,start,end)
 st.subheader('Dates of ETC-USD stock')
