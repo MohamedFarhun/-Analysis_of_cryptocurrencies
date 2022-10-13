@@ -93,9 +93,9 @@ st.subheader('Calculating and describing mean,std,count')
 df1=df.describe()
 st.table(df1)
 
-new_df = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
+new_df = pd.DataFrame({dropdown : df['Open'], dropdown : df['Close']})
 st.subheader('Setting date as index')
-new_df1 = pd.DataFrame({symbol : df['Open'], symbol : df['Close']})
+new_df1 = pd.DataFrame({dropdown : df['Open'], dropdown : df['Close']})
 df_ts1=new_df1.tail(3)
 st.table(df_ts1)
 
