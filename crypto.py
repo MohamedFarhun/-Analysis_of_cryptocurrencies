@@ -576,6 +576,6 @@ st.subheader('Predicting future values by graph of XRP-USD')
 st.pyplot(plt)
 plt.close()
 
-st.title(' Warning: This is not financial advisor. Do not use this to invest or trade. It is for educational purpose.')
+st.header(' Warning: This is not financial advisor. Do not use this to invest or trade. It is for educational purpose.')
 st.title('Before judging have a deep analysis on how the graph changes for every cryptocurrencies ')
 
