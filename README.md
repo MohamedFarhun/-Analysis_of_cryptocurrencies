@@ -25,6 +25,9 @@ We have developed an app which predicts the future cryptocurrency values of btc-
 • yfinance
 
 
+• Statsmodel
+
+
 #### We have done our project in the daisi platform (https://app.daisi.io/daisies/farhun/Analysis%20of%20cryptocurrencies/app) using Streamlit UI. We used yfinance-Yahoo finance(fetches live dataset of cryptos) from which we can have a statistical analysis of cryptos(graphically).
 ## Features
 •Predicting Cryptocurrency graph variations from the start and end date
@@ -91,4 +94,8 @@ analysis_of_cryptocurrencies$st_ui()$value()
 
 test_stationarity
 analysis_of_cryptocurrencies$test_stationarity(timeseries)$value()
+
+### Screenshot of our app
+![image](https://user-images.githubusercontent.com/86124759/195563159-b7da0b33-90cf-4f66-b67b-265ff723e062.png)
+![image](https://user-images.githubusercontent.com/86124759/195563332-db10fea3-edbd-4d4a-b57d-fa7e08495ef5.png)
 
