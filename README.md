@@ -49,12 +49,12 @@ import pydaisi as pyd
 analysis_of_cryptocurrencies = pyd.Daisi("farhun/Analysis of cryptocurrencies")
 
 ### Documented endpoints
-##### cryptocurrency
+##### Cryptocurrency
 
 
 analysis_of_cryptocurrencies.cryptocurrency().value
 
-##### analysis_of_cryptocurrency
+##### Analysis_of_cryptocurrency
 
 analysis_of_cryptocurrencies.analysis_of_cryptocurrency().value
 
@@ -64,11 +64,11 @@ configure_daisi(python_path="/usr/local/bin/python3")
 analysis_of_cryptocurrencies <- Daisi("farhun/Analysis of cryptocurrencies")
 
 ### Endpoints
-##### cryptocurrency
+##### Cryptocurrency
 
 analysis_of_cryptocurrencies$cryptocurrency()$value()
 
-##### app
+##### App
 analysis_of_cryptocurrencies$app()$value()
 
 #### st_ui
