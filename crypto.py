@@ -30,6 +30,24 @@ def analysis_of_cryptocurrency():
     global cryptocurrency
     if cryptocurrency: return analysis_of_cryptocurrency
     ...
+
+def analysis_of_cryptocurrency_ml():
+    """Analysis_of_cryptocurrencies.cryptocurrency().value"""
+    global cryptocurrency
+    if cryptocurrency: return analysis_of_cryptocurrency_ml
+    ...
+    
+def analysis_of_cryptocurrency_using_machine_learning():
+    """Analysis_of_cryptocurrencies.cryptocurrency().value"""
+    global cryptocurrency
+    if cryptocurrency: return analysis_of_cryptocurrency_using_machine_learning
+    ...
+ 
+def analysis_of_cryptocurrency_using_farhun():
+    """Analysis_of_cryptocurrencies.cryptocurrency().value"""
+    global cryptocurrency
+    if cryptocurrency: return analysis_of_cryptocurrency_farhun
+    ...
     
 def app():
     '''
@@ -42,6 +60,39 @@ def app():
         initial_sidebar_state="expanded"
     )
     
+def ethereum():
+    '''
+    Ethereum
+    '''
+    st.set_page_config(
+        page_title="Analysis of cryptocurrencies",
+        page_icon="🍲",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
+
+def solan():
+    '''
+    Solan
+    '''
+    st.set_page_config(
+        page_title="Analysis of cryptocurrencies",
+        page_icon="🍲",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
+
+def ripple():
+    '''
+    Ripple
+    '''
+    st.set_page_config(
+        page_title="Analysis of cryptocurrencies",
+        page_icon="🍲",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )    
+    
 def bitcoin():
     '''
     Streamlit UI
@@ -52,7 +103,7 @@ def bitcoin():
         layout="wide",
         initial_sidebar_state="expanded"
     )
-    
+
 with st.sidebar:
     st.header("Analysis of cryptocurrencies-Round 2")
     st.image("cryptocurrency.jpg")
