@@ -43,7 +43,7 @@ def analysis_of_cryptocurrency_using_machine_learning():
     if cryptocurrency: return analysis_of_cryptocurrency_using_machine_learning
     ...
  
-def analysis_of_cryptocurrency_using_farhun():
+def analysis_of_cryptocurrency_farhun():
     """Analysis_of_cryptocurrencies.cryptocurrency().value"""
     global cryptocurrency
     if cryptocurrency: return analysis_of_cryptocurrency_farhun
@@ -115,6 +115,16 @@ with st.sidebar:
     video_file = open('Crypto.mp4', 'rb')
     video_bytes = video_file.read()
     st.video(video_bytes)
+    
+def add_bg_from_url():
+    st.markdown(f"""
+         <style>
+         .stApp {{
+             background-image: url("https://img.freepik.com/premium-vector/white-abstract-background-3d-paper-style_23-2148403778.jpg?w=996");
+             background-attachment: fixed;
+             background-size: cover}}
+             </style>""",unsafe_allow_html=True)
+add_bg_from_url() 
 
 def st_ui():
     '''
