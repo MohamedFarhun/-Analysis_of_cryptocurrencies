@@ -105,7 +105,7 @@ def bitcoin():
     )
 
 with st.sidebar:
-    st.header("Analysis of cryptocurrencies-Round 2")
+    st.header("ARIMA statsmodel-Cryptocurrency Analysis-Round 2")
     st.image("cryptocurrency.jpg")
     st.header("Team name : TEKKYZZ")
     st.write("Leader     : MOHAMED FARHUN M")
