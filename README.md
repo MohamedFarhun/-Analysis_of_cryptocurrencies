@@ -1,4 +1,4 @@
-# Analysis of cryptocurrencies
+# ARIMA statsmodel-Cryptocurrency Analysis
 ## This app gives us the analysis of various cryptocurrencies.
 We have developed an app which predicts the future cryptocurrency values of btc-usd,eth-usd.Took the csv file of bitcoin and found the rolling mean,variance.Plotted the vanila decomposition graph for cryptos.
 ### Team Details:
