@@ -17,7 +17,7 @@ from sklearn.metrics import mean_squared_error
 import datetime as dt
 from statsmodels.tsa.stattools import adfuller
 
-st.title('Analysis of cryptocurrencies')
+st.title('ARIMA statsmodel-Cryptocurrency Analysis')
 
 def cryptocurrency():
     """Analysis_of_cryptocurrencies.cryptocurrency().value"""
